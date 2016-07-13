@@ -1,1 +1,1 @@
-# reactBase
+# reactBase### Single widget development  -Check wiki for errors or other randomness ## DEPENDENCIESPackage.json#### Dependencies Main#### Dev Dependencies
