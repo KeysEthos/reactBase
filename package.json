@@ -4,18 +4,9 @@
   "description": "single widget developement",
   "main": "server.js",
   "scripts": {
-    "start": "concurrent --kill-others",
-    "build": "better-npm-run build",
+    "build": "npm run clean && npm run build:webpack",
     "lint": "eslint -c .eslintrc src",
-    "test": "karma start",
-    "start-dev": {
-      "command": "node ./bin/server.js",
-      "env": {
-        "NODE_PATH": "./scr",
-        "NODE_ENV": "development",
-        "PORT": 3000
-      }
-    }
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -33,6 +24,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
+    "less": "^2.7.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-router": "^2.5.2",
@@ -52,6 +44,7 @@
     "eslint-plugin-babel": "^3.0.0",
     "eslint-plugin-react": "^3.11.3",
     "eventsource-polyfill": "^0.9.6",
+    "less-loader": "^2.2.3",
     "nodemon": "^1.9.2",
     "rimraf": "^2.4.3",
     "webpack": "^1.12.9",
