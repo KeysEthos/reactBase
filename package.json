@@ -4,7 +4,18 @@
   "description": "single widget developement",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrent --kill-others",
+    "build": "better-npm-run build",
+    "lint": "eslint -c .eslintrc src",
+    "test": "karma start",
+    "start-dev": {
+      "command": "node ./bin/server.js",
+      "env": {
+        "NODE_PATH": "./scr",
+        "NODE_ENV": "development",
+        "PORT": 3000
+      }
+    }
   },
   "repository": {
     "type": "git",
@@ -41,6 +52,7 @@
     "eslint-plugin-babel": "^3.0.0",
     "eslint-plugin-react": "^3.11.3",
     "eventsource-polyfill": "^0.9.6",
+    "nodemon": "^1.9.2",
     "rimraf": "^2.4.3",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
